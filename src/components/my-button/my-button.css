@@ -1,0 +1,28 @@
+:host {
+  display: inline;
+}
+
+:host button {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 12px;
+  min-width: 180px;
+  border-radius: 12px;
+}
+
+:host([variant="primary"]) button {
+  background-color: var(--color-brand);
+  color: var(--color-white);
+  border: 0;
+}
+
+:host([variant="secondary"]) button {
+  border: var(--border-high-contrast);
+  background-color: var(--background-low-contrast);
+  color: var(--text-high-contrast);
+}
+
+slot[name="icon"]::slotted(*) {
+  margin-left: var(--gap-sm);
+}

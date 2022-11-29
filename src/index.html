@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <script type="module" src="/main.js"></script>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <my-dropdown placeholder="Select">
+      <my-dropdown-option value="light">
+        Light theme
+        <p slot="content" class="option-description">
+          Your vision sharpens, enabling you to focus better
+        </p>
+      </my-dropdown-option>
+      <my-dropdown-option value="dark">
+        Dark theme
+        <p slot="content" class="option-description">
+          Reduce eye strain in low light conditions
+        </p>
+      </my-dropdown-option>
+      <my-dropdown-option value="sepia">
+        Sepia theme
+        <p slot="content" class="option-description">Middle ground</p>
+      </my-dropdown-option>
+    </my-dropdown>
+  </body>
+</html>

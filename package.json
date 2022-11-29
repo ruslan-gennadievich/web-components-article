@@ -1,0 +1,16 @@
+{
+  "name": "web-components-article",
+  "version": "1.0.0",
+  "description": "Supporting repo for the web components article series",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server src"
+  },
+  "keywords": ["web-components"],
+  "author": "Joan Llenas Masó",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^2.8.0"
+  }
+}

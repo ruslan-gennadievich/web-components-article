@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+:host::part(container) {
+  padding: 8px 16px;
+  background-color: var(--background-low-contrast);
+  color: var(--text-high-contrast);
+  font-size: var(--font-sm);
+}
+
+:host::part(container):hover {
+  background-color: var(--background-high-contrast);
+  color: var(--text-low-contrast);
+}

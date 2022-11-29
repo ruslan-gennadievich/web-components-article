@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+:host::part(options) {
+  display: none;
+  flex-direction: column;
+  margin-top: var(--gap-sm);
+  border: var(--border-high-contrast);
+}
+
+:host([open])::part(options) {
+  display: flex;
+}

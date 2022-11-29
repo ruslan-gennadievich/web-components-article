@@ -1,0 +1,91 @@
+:root {
+  --background-color: #fff;
+
+  --color-brand: #0b66fa;
+  --color-white: #fff;
+  --color-black: #000000de;
+
+  --border-radius-sm: 8px;
+  --gap-sm: 8px;
+  --font-sm: 18px;
+  --font-md: 20px;
+
+  /* theme */
+  --background-low-contrast: var(--color-white);
+  --background-high-contrast: var(--color-black);
+
+  --text-low-contrast: var(--color-white);
+  --text-high-contrast: var(--color-black);
+
+  --border-low-contrast: 1px solid var(--color-white);
+  --border-high-contrast: 1px solid var(--color-black);
+}
+
+html[data-theme="dark"] {
+  --background-color: #212a2e;
+
+  --background-low-contrast: var(--color-black);
+  --background-high-contrast: var(--color-white);
+
+  --text-low-contrast: var(--color-black);
+  --text-high-contrast: var(--color-white);
+
+  --border-low-contrast: 1px solid var(--color-black);
+  --border-high-contrast: 1px solid var(--color-white);
+}
+
+html[data-theme="sepia"] {
+  --background-color: #bfa26b;
+
+  --background-low-contrast: #bfa26b;
+  --background-high-contrast: #594225;
+
+  --text-low-contrast: #bfa26b;
+  --text-high-contrast: #401902;
+
+  --border-low-contrast: 1px solid #bfa26b;
+  --border-high-contrast: 1px solid #401902;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: sans-serif;
+}
+
+/* 
+ Styling user content placed inside of a slot
+*/
+my-dropdown-option .option-description {
+  font-size: small;
+  color: var(--text-high-contrast);
+}
+
+my-dropdown-option:hover .option-description {
+  color: var(--text-low-contrast);
+}
+
+/* 
+----------------------------
+-------- CSS PARTS ---------
+-- styling the shadow DOM --
+----- from the outside -----
+----------------------------
+*/
+
+my-dropdown::part(options) {
+  border-radius: var(--border-radius-sm);
+}
+
+my-dropdown-option:not(:first-child)::part(container) {
+  border-top: var(--border-high-contrast);
+}
+
+my-dropdown-option:first-child::part(container) {
+  border-top-left-radius: var(--border-radius-sm);
+  border-top-right-radius: var(--border-radius-sm);
+}
+
+my-dropdown-option:last-child::part(container) {
+  border-bottom-left-radius: var(--border-radius-sm);
+  border-bottom-right-radius: var(--border-radius-sm);
+}
